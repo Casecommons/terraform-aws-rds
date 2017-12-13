@@ -60,5 +60,10 @@ resource "aws_db_instance" "this" {
   backup_retention_period = "${var.backup_retention_period}"
   backup_window           = "${var.backup_window}"
 
+  timeouts {
+    create = "${var.timeouts_create}"
+    delete = "${var.timeouts_destroy}"
+  }
+
   tags = "${merge(var.tags, map("Name", format("%s", var.identifier)))}"
 }

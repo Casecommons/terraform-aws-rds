@@ -124,6 +124,16 @@ variable "create_monitoring_role" {
   default     = false
 }
 
+variable "timeouts_create" {
+  description = "The time to allow for DB creation. Syntax same as resource timeouts, e.g. 30m, 2h, etc."
+  default     = "30m"
+}
+
+variable "timeouts_destroy" {
+  description = "The time to allow for DB destroy. Syntax same as resource timeouts, e.g. 30m, 2h, etc."
+  default     = "30m"
+}
+
 variable "allow_major_version_upgrade" {
   description = "Indicates that major version upgrades are allowed. Changing this parameter does not result in an outage and the change is asynchronously applied as soon as possible"
   default     = false
