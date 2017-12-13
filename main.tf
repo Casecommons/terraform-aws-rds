@@ -77,5 +77,8 @@ module "db_instance" {
   monitoring_role_name   = "${var.monitoring_role_name}"
   create_monitoring_role = "${var.create_monitoring_role}"
 
+  timeouts_create = "${var.timeouts_create}"
+  timeouts_delete = "${var.timeouts_delete}"
+
   tags = "${var.tags}"
 }
