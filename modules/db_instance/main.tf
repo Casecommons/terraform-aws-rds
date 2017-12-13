@@ -62,7 +62,7 @@ resource "aws_db_instance" "this" {
 
   timeouts {
     create = "${var.timeouts_create}"
-    delete = "${var.timeouts_destroy}"
+    delete = "${var.timeouts_delete}"
   }
 
   tags = "${merge(var.tags, map("Name", format("%s", var.identifier)))}"

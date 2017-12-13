@@ -129,7 +129,7 @@ variable "timeouts_create" {
   default     = "30m"
 }
 
-variable "timeouts_destroy" {
+variable "timeouts_delete" {
   description = "The time to allow for DB destroy. Syntax same as resource timeouts, e.g. 30m, 2h, etc."
   default     = "30m"
 }
